@@ -8,12 +8,14 @@ def extraction():
     except Exception:
         return None
     if content.status_code == 200:
-        soup = BeautifulSoup(content.text, 'html.parser')
 
+        soup = BeautifulSoup(content.text, 'html.parser')
+        print(soup)
         result = soup.find('span', {'class': 'waktu'})
+        print(result)
         result = result.text.split(', ')
-        waktu = result[1]
         tanggal = result[0]
+        waktu = result[1]
 
         result = soup.find('div', {'class': 'col-md-6 col-xs-6 gempabumi-detail no-padding'})
         result = result.findChildren('li')

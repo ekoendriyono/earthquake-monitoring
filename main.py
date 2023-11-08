@@ -1,6 +1,6 @@
-import latest
+import latestearthquake
 
 if __name__ == '__main__':
     print('My Application')
-    result = latest.extraction()
-    latest.show_data(result)
+    result = latestearthquake.extraction()
+    latestearthquake.show_data(result)
